@@ -37,7 +37,7 @@ public class MainApp {
 
                 if (player.getScore() > 21) {
                     System.out.println(player.getName() + " busted! ");
-                    return;
+                    break;
                 }
                 System.out.print("Would you like to stay/hit(h or s): ");
                 String choice = myScanner.nextLine().trim().toLowerCase();
@@ -65,10 +65,17 @@ public class MainApp {
         System.out.println("\n=== Final Score ===\n");
         for (Player player: getPlayers) {
             int score = player.getScore();
-            System.out.println(player.getName() + ": " + score);
+            System.out.println(player.getName().toLowerCase() + ": " + score);
             if (score <= 21 && score > highScore) {
                 highScore = score;
                 winner = player;
+            }
+
+            System.out.println("\n---Winner---");
+            if (winner != null) {
+                System.out.println("Winner: " + winner.getName() + " with " + highScore + " points!");
+            } else {
+                System.out.println("Everyone busted! No winner declared");
             }
 
         }
