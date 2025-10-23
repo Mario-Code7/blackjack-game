@@ -1,10 +1,10 @@
 package com.pluralsight;
 
-public class Players {
+public class Player {
     private String name;
     private Hand hand;
 
-    public Players(String name) {
+    public Player(String name) {
         this.name = name;
         this.hand = new Hand();
     }
@@ -15,6 +15,10 @@ public class Players {
 
     public Hand getHand() {
         return hand;
+    }
+
+    public int getScore(){
+        return hand.getValue();
     }
 
     @Override

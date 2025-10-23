@@ -27,4 +27,11 @@ public class Hand {
             }
             return value;
         }
+
+    @Override
+    public String toString() {
+        return "Hand{" +
+                "cards=" + cards +
+                '}';
     }
+}

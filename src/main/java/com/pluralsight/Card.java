@@ -60,10 +60,15 @@ public class Card {
 
     @Override
     public String toString() {
-        if (isFaceUp) {
-            return value + "of" + suit;
-        } else {
-            return "###";
-        }
+        return "Card{" +
+                "suit='" + suit + '\'' +
+                ", value='" + value + '\'';
     }
+
+//    public String toString() {
+//        if (isFaceUp) {
+//            return value + " of " + suit;
+//        } else {
+//            return "#";
+//        }
 }
