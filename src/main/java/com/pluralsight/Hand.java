@@ -19,6 +19,7 @@ public class Hand {
 // the value of each card - and adds up all values
         public int getValue(){
             int value = 0;
+            int aceCount = 0;
             for(Card card: cards){
                 card.flip(); // turn the card over to see the value
                 value += card.getPointValue();
